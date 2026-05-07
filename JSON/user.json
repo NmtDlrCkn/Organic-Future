@@ -1,0 +1,23 @@
+[
+  {
+    "username": "admin",
+    "password": "sa1t",
+    "id": "EMP001",
+    "name": "Max Muster"
+  },
+  {
+    "username": "user1",
+    "password": "securePass",
+    "id": "EMP002",
+    "mail":"Mock@mail.com",
+    "name": "Erika Muster"
+  },
+   {
+    "username": "user2",
+    "password": "user2",
+    "id": "EMP003",
+    "mail":"Mock@mail.com",
+    "name": "Erik Muster"
+  }
+
+]

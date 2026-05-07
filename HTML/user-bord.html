@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Dashboard OFC</title>
+  <link rel="stylesheet" href="../CSS/user-bord.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand" id="brandToggle">
+        <h2>🍎rganic Future</h2>
+        <p>Employee Portal</p>
+
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#overview">Dashboard</a>
+        <a href="#tasks">Tasks</a>
+        <a href="#chat">Chat</a>
+        <a href="#salary">Monthly Salary Report</a>
+        <a href="#profile">Profile</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>Welcome 😊</h1>
+          <p>Your personal workspace at Organic Future</p>
+        </div>
+        <div class="header-actions">
+          <button class="logout-btn">Logout</button>
+         </div>
+      </header>
+
+      <section id="overview" class="cards-grid">
+        <div class="card">
+          <h3>Pending Tasks</h3>
+          <p>5 Active Tasks</p>
+        </div>
+
+        <div class="card">
+          <h3>Messages</h3>
+          <p>3 New Messages</p>
+        </div>
+
+        <div class="card">
+          <h3>Salary Status</h3>
+          <p>Processed for This Month</p>
+        </div>
+      </section>
+
+      <section id="tasks" class="content-section">
+        <h2>My Tasks</h2>
+        <div class="card">
+          <p>Manage your daily tasks, deadlines, and priorities here.</p>
+        </div>
+      </section>
+
+      <section id="chat" class="content-section">
+        <h2>Team Chat</h2>
+        <div class="card">
+          <p>Collaborate and communicate with your team members.</p>
+        </div>
+      </section>
+
+      <section id="salary" class="content-section">
+        <h2>Monthly Salary Report</h2>
+        <div class="card">
+          <p>View salary details, payment history, and downloadable payslips.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/JS/user-board.js"></script>
+</body>
+</html>

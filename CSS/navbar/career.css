@@ -1,0 +1,80 @@
+:root {
+  --primary-green: #d8f3dc;
+  --accent-green: #52b788;
+  --light-blue: #dbeafe;
+  --light-pink: #fce7f3;
+  --text-dark: #1f2937;
+  --white: rgba(255, 255, 255, 0.9);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, var(--primary-green), var(--light-blue), var(--light-pink));
+  color: var(--text-dark);
+}
+
+.career-header {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.career-header h1 {
+  color: var(--accent-green);
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.slogan {
+  font-style: italic;
+  color: var(--text-dark);
+}
+
+.career-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.intro-card,
+.benefit-card,
+.job-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.intro-card {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.benefits-grid,
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+h2 {
+  text-align: center;
+  color: var(--accent-green);
+  margin-bottom: 1.5rem;
+}
+
+.job-card button {
+  margin-top: 1rem;
+  background: var(--accent-green);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.job-card button:hover {
+  transform: translateY(-2px);
+}

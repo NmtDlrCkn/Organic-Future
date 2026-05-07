@@ -1,0 +1,29 @@
+    body {
+        font-family: Arial, sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+        margin: 0;
+        padding: 20px;
+    }
+
+    /* Light mode */
+    body.light-mode {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    /* Dark mode */
+    body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+    }
+
+    /* Toggle button */
+    .mode-toggle {
+        padding: 10px 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #007BFF;
+        color: white;
+        font-size: 16px;
+    }
