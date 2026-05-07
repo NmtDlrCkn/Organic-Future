@@ -52,7 +52,7 @@ registerForm.addEventListener('submit', (e) => {
 
     //Redirecting to the login page
     alert("Registration successful! Your ID is: " + newUser.id);
-    window.location.href = '../HTML/login.html';
+    window.location.href = '../login.html';
 });
 
 // Error message function

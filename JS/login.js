@@ -28,7 +28,7 @@ loginForm.addEventListener('submit', async (e) => {
             localStorage.setItem('currentUserName', user.name);
 
             // Redirect to the dashboard
-            window.location.href = '/HTML/user-bord.html';
+            window.location.href = '/user-bord.html';
         } else {
             // Error message
             loginError.innerText = "Invalid username or password!";
