@@ -1,0 +1,25 @@
+<users>
+  <user>
+    <username>admin</username>
+    <password>sa1t</password>
+    <id>EMP001</id>
+    <email>admin@mail.com</email>
+    <name>Max Muster</name>
+  </user>
+
+  <user>
+    <username>user1</username>
+    <password>securePass</password>
+    <id>EMP002</id>
+    <email>mock@mail.com</email>
+    <name>Erika Muster</name>
+  </user>
+
+  <user>
+    <username>user2</username>
+    <password>user2</password>
+    <id>EMP003</id>
+    <email>mock2@mail.com</email>
+    <name>Erik Muster</name>
+  </user>
+</users>

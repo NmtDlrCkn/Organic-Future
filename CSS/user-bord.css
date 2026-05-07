@@ -172,7 +172,7 @@ button {
   --accent-green: #52b788;
   --light-blue: #dbeafe;
   --light-pink: #fce7f3;
-  --soft-white: rgba(255, 255, 255, 0.9); /* Glas-Effekt */
+  --soft-white: rgba(255, 255, 255, 0.9); /* Glas-Effect */
   --text-dark: #1f2937;
   --text-muted: #6b7280;
 }
@@ -184,7 +184,7 @@ button {
   --accent-green: #74c69d;
   --light-blue: #1e293b;
   --light-pink: #4c1d37;
-  --soft-white: rgba(31, 41, 55, 0.95); /* Dunkle Karten */
+  --soft-white: rgba(31, 41, 55, 0.95); /* Dark cards */
   --text-dark: #f3f4f6;
   --text-muted: #9ca3af;
 }
@@ -252,7 +252,7 @@ body {
   transition: 0.3s;
 }
 
-/* --- HIDE/SHOW LOGIK (Kriterium 2.5) --- */
+/* --- HIDE/SHOW LOGIK --- */
 .hidden {
   display: none !important;
 }

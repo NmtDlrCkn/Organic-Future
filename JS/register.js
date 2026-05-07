@@ -1,79 +1,8 @@
-/*document.addEventListener("DOMContentLoaded", () => {
-
-  const form = document.getElementById("registerForm");
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const username = document.getElementById("username").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const firstName = document.getElementById("firstName").value.trim();
-    const lastName = document.getElementById("lastName").value.trim();
-    const password = document.getElementById("password").value.trim();
-
-    const errorBox = document.getElementById("registerError");
-
-    errorBox.textContent = "";
-
-    // empty check
-    if (!username || !email || !firstName || !lastName || !password) {
-      errorBox.textContent = "All fields are required!";
-      return;
-    }
-
-    // email validation
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailPattern.test(email)) {
-      errorBox.textContent = "Invalid email format!";
-      return;
-    }
-
-    // password length check
-    const strongPassword = /^(?=.*[A-Z])(?=.*\d).{9,}$/;
-
-    if (!strongPassword.test(password)) {
-        alert("Password must contain at least 3 uppercase letter and 5 number!");
-        return;
-    }
-
-    // get users
-    let users = JSON.parse(localStorage.getItem("users")) || [];
-
-    // duplicate check
-    const exists = users.some(
-      u => u.username === username || u.email === email
-    );
-
-    if (exists) {
-      errorBox.textContent = "Username or Email already exists!";
-      return;
-    }
-
-    // save user
-    const newUser = {
-      username,
-      email,
-      firstName,
-      lastName,
-      password
-    };
-
-    users.push(newUser);
-    localStorage.setItem("users", JSON.stringify(users));
-
-    alert("Registration successful!");
-
-    window.location.href = "login.html";
-  });
-
-});*/
-
 const registerForm = document.getElementById('registerForm');
 const registerError = document.getElementById('registerError');
 
 registerForm.addEventListener('submit', (e) => {
-    e.preventDefault(); // Verhindert das Neuladen der Seite
+    e.preventDefault(); //Prevents the page from reloading
 
     // 1. Werte aus den Feldern holen
     const username = document.getElementById('username').value.trim();
@@ -82,52 +11,51 @@ registerForm.addEventListener('submit', (e) => {
     const lastName = document.getElementById('lastName').value.trim();
     const password = document.getElementById('password').value;
 
-    // --- KRITERIUM 2.3: VALIDIERUNG DER EINGABEN ---
+    //  VALIDATION OF INPUT ---
 
-    // Email-Format prüfen (Regex)
+    // Email-Format examination (Regex)
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         showError("Please enter a valid email format!");
         return;
     }
 
-    // Pflichtfelder prüfen (schon durch 'required' im HTML, aber gut für JS-Validierung)
+    // Check required fields
     if (firstName.length < 2 || lastName.length < 2) {
         showError("First and Last name must be at least 2 characters long.");
         return;
     }
 
-    // --- KRITERIUM 2.2 & 2.4: VERARBEITUNG & EINZIGARTIGKEIT ---
-
-    // Wir holen die bereits registrierten User aus dem LocalStorage
+    // --- MANUFACTURING & UNIQUENESS ---
+    // retrieve the users who have already registered from LocalStorage
     let users = JSON.parse(localStorage.getItem('registeredUsers')) || [];
 
-    // Prüfen, ob Username oder Email schon existieren (Unique Check)
+    // Checks whether the username or email address already exists (unique check)
     const userExists = users.find(u => u.username === username || u.email === email);
     if (userExists) {
         showError("Username or Email already registered!");
         return;
     }
 
-    // Neuen User erstellen
+    // Create a new user
     const newUser = {
-        id: "EMP" + Math.floor(1000 + Math.random() * 9000), // Generiert z.B. EMP4921
+        id: "EMP" + Math.floor(1000 + Math.random() * 9000), // Generated example EMP4921
         username: username,
         email: email,
         name: firstName + " " + lastName,
         password: password
     };
 
-    // Im LocalStorage speichern
+    // Save to LocalStorage
     users.push(newUser);
     localStorage.setItem('registeredUsers', JSON.stringify(users));
 
-    // Erfolg! Weiterleitung zum Login
+    //Redirecting to the login page
     alert("Registration successful! Your ID is: " + newUser.id);
     window.location.href = '../HTML/login.html';
 });
 
-// Hilfsfunktion für Fehlermeldungen
+// Error message function
 function showError(message) {
     registerError.innerText = message;
     registerError.style.color = "#ff4b2b";
